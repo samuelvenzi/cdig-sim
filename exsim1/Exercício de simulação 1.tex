@@ -423,18 +423,45 @@ oscilação da resposta marginalmente estável é igual a calculada no item
 anterior. Apresente o diagrama de simulação e os gráficos das respostas
 obtidas.}
 
-A simulação foi realizada com a biblioteca \emph{open source}
-\texttt{control} disponível para Python pela indisponibilidade do MATLAB
-no momento.
+A simulação foi realizada com o Simulink e também fui utilizada a biblioteca \emph{open source}
+\texttt{control} disponível para Python para conferência das simulações.
 
 Foi realizada a simulação da resposta ao degrau unitário para
-\texttt{K\ =-1, 0.1, 0.2, 0.3 , 0.4, 0.5, 1, 2.39, 5} e é possível observar o mesmo que
+\texttt{K\ =-1, 0.5, 2.39, 5} e é possível observar o mesmo que
 os critérios de Juri e de Routh modificado mostraram. O sistema é
 marginalmente estável para \(K = 2.39\) e estável para \(0 < K < 2.39\).
+
+
+    \begin{center}
+	\adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{k--1.png}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+    \begin{center}
+	\adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{k-05.png}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+    \begin{center}
+	\adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{k-239.png}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+    \begin{center}
+	\adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{k-5.png}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+Anexo abaixo está o código e as simulações extras feitas com a biblioteca de controle para Python.
 Também é possível observar abaixo de cada gráfico, a localização dos
 polos e o valores de \(\omega_n\). Quando o sistema é marginalmente
 estável, o valor de \(\omega_n = 1.32rad/s\) como calculado no item
 anterior.
+
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{2}{\boxspacing}
@@ -471,50 +498,6 @@ anterior.
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_2.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-\_\_\_\_\_Eigenvalue\_\_\_\_\_\_ Damping\_\_\_ Frequency\_
-    0.8861                     1    -0.8861
-     0.445                     1     -0.445
-    \end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_4.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-\_\_\_\_\_Eigenvalue\_\_\_\_\_\_ Damping\_\_\_ Frequency\_
-    0.6472  +0.04386j      0.988     0.4381
-    0.6472  -0.04386j      0.988     0.4381
-    \end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_6.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-\_\_\_\_\_Eigenvalue\_\_\_\_\_\_ Damping\_\_\_ Frequency\_
-    0.6288   +0.2276j      0.757     0.5316
-    0.6288   -0.2276j      0.757     0.5316
-    \end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_8.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-\_\_\_\_\_Eigenvalue\_\_\_\_\_\_ Damping\_\_\_ Frequency\_
-    0.6104   +0.3178j     0.6142     0.6084
-    0.6104   -0.3178j     0.6142     0.6084
-    \end{Verbatim}
-
-    \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_10.png}
     \end{center}
     { \hspace*{\fill} \\}
@@ -525,16 +508,6 @@ anterior.
      0.592   -0.3867j     0.5138     0.6745
     \end{Verbatim}
 
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_12.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-\_\_\_\_\_Eigenvalue\_\_\_\_\_\_ Damping\_\_\_ Frequency\_
-       0.5   +0.6181j     0.2494     0.9197
-       0.5   -0.6181j     0.2494     0.9197
-    \end{Verbatim}
 
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_4_14.png}
